@@ -3,10 +3,11 @@
     "version": "1.0",
     "description": "Shows the total rating change after a session of puzzles on Lichess.org",
     "permissions": ["activeTab"],
-    "content_scripts":
-    {
-        "matches": ["https://lichess.org/training/*"],
-        "js": ["content.js"]
-    },
+    "content_scripts":[
+      {
+          "matches": ["https://lichess.org/training/*"],
+          "js": ["content.js"]
+      }
+    ],
     "manifest_version": 3
   }
