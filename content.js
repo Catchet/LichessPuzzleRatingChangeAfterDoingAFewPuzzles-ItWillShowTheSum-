@@ -20,7 +20,9 @@ function updateTotal() {
   }
 
   // Change colour depending on the score
-  if (sum >= 0)
+  if (sum == 0)
+    totalElement.className = 'result-true current';
+  else if (sum > 0)
     totalElement.className = 'result-true';
   else
     totalElement.className = 'result-false';
