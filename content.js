@@ -4,7 +4,7 @@ function updateTotal() {
   let sum = 0;
 
   elements.forEach(element => {
-    const number = parseFloat(element.textContent);
+    const number = parseInt(element.textContent);
     if (!isNaN(number)) {
       sum += number;
     }
@@ -26,7 +26,10 @@ function updateTotal() {
     totalElement.className = 'result-false';
 
   // Update the total element with the new sum
-  totalElement.textContent = `Total: ${sum}`;
+  totalElement.textContent = `Total: ${sum > 0 ? '+' : ''}${sum}`;
+  // Prevent text from wrapping
+  totalElement.style.whiteSpace = 'nowrap';
+  totalElement.style.padding = '0 5px';
 }
   
 // Initial calculation and display
